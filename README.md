@@ -1,0 +1,8 @@
+# Arja-Interiers.com
+
+- Stack: Next.js + Contentful CMS + Tailwind
+- i18n: HR - default i ENG
+- Slanje mailova: SENDGRID
+
+## Todo:
+

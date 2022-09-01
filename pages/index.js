@@ -1,0 +1,109 @@
+import Head from "next/head";
+
+import { createClient } from "contentful";
+
+import { useRouter } from "next/router";
+import Hero from "../components/Hero";
+import SectionColor from "../components/SectionColor";
+import Section from "../components/Section";
+import ContentWithImage from "../components/ContentWithImage";
+import ImageCard from "../components/ImageCard";
+import Image from "next/image";
+
+const Home = ({ home }) => {
+  const router = useRouter();
+  const {
+    naslovHero,
+    podnaslov,
+    slikaHero,
+    naslovONama,
+    tekstONama,
+    slikaONama,
+    partneri,
+  } = home;
+
+  return (
+    <div>
+      <Head>
+        <title>Arja Interiers</title>
+        <meta name="description" content="Arja Interiers" />
+        <meta property="og:title" content="Arja Interiers" />
+        {/* <meta
+          property="og:image"
+          content="https://images.ctfassets.net/mbkud2lk1r1a/54JtODSYu8GHHj8siUqSTb/fc4e891ed5aa888b554d8b1be6f6c2f3/bluecave.webp"
+        /> */}
+        <meta property="og:description" content="Arja Interiers" />
+      </Head>
+      <Hero
+        naslov={naslovHero}
+        podnaslov={podnaslov}
+        slika={slikaHero.fields.file.url}
+      />
+      <main>
+        <SectionColor naslov={router.locale === "hr" ? "O nama" : "About us"}>
+          <ContentWithImage
+            opisNaslov={naslovONama}
+            opis={tekstONama}
+            slika={slikaONama}
+          />
+        </SectionColor>
+        <Section naslov={router.locale === "hr" ? "Proizvodi" : "Products"}>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 mx-1">
+            <ImageCard
+              naslov={router.locale === "hr" ? "Parketi" : "Parquet"}
+              link="/parketi"
+              slika="/images/naslovnica/parket.jpg"
+            />
+            <ImageCard
+              naslov={router.locale === "hr" ? "Vrata" : "Doors"}
+              link="/vrata"
+              slika="/images/naslovnica/vrata.jpg"
+            />
+            <ImageCard
+              naslov={
+                router.locale === "hr"
+                  ? "Laminati i vinili"
+                  : "Laminate & Vinyl"
+              }
+              link="/lmaminati-i-vinili"
+              slika="/images/naslovnica/laminat.jpg"
+            />
+            <ImageCard
+              naslov={router.locale === "hr" ? "Terase i fasade" : "Decking"}
+              link="/terase-i-fasade"
+              slika="/images/naslovnica/decking.jpg"
+            />
+          </div>
+        </Section>
+        <SectionColor naslov={router.locale === "hr" ? "Partneri" : "Partners"}>
+          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-9 gap-4 mx-1 items-center">
+            {partneri.map((partner, index) => (
+              <div key={index} className="px-16 py-2 md:p-0">
+                <Image src={`https:${partner.fields.file.url}`} alt="partneri" width={500} height={100}/>
+              </div>
+            ))}
+          </div>
+        </SectionColor>
+      </main>
+    </div>
+  );
+};
+
+export default Home;
+export async function getStaticProps({ locale }) {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
+  const home = await client.getEntries({
+    content_type: "home",
+    locale,
+  });
+
+  return {
+    revalidate: 5,
+    props: {
+      home: home.items[0].fields,
+    },
+  };
+}
