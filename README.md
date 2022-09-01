@@ -1,4 +1,4 @@
-# Arja-Interiers.com
+# Arja.hr
 
 - Stack: Next.js + Contentful CMS + Tailwind
 - i18n: HR - default i ENG
