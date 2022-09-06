@@ -6,3 +6,8 @@
 
 ## Todo:
 
+- sendgrid aktivirat i povezat
+- dodat preostale podstranice nakon sastanka
+- meta tagovi
+- redirektat domenu na server
+- deployat na server
