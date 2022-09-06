@@ -8,7 +8,6 @@ const Layout = ({ children }) => {
       <Header />
       {children}
       <Footer />
-      <BookBar />
     </div>
   );
 };

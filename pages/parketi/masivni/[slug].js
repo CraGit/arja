@@ -6,13 +6,21 @@ import Section from "../../../components/Section";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
+import Gallery from "../../../components/Gallery";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 });
 export default function Proizvod({ proizvod }) {
-  const { naslov, galerijaSlider, opis, kataloziPdf, slikaCard } = proizvod;
+  const {
+    naslov,
+    galerijaSlider,
+    opis,
+    kataloziPdf,
+    slikaCard,
+    galerijaObicna,
+  } = proizvod;
   console.log(kataloziPdf);
   const router = useRouter();
   return (
@@ -23,7 +31,7 @@ export default function Proizvod({ proizvod }) {
           <ContentWithImage slika={slikaCard} opis={opis} opisNaslov="" />
         </SectionColor>
       )}
-      {kataloziPdf && (
+      {kataloziPdf && kataloziPdf.length > 0 && (
         <Section naslov={router.locale === "hr" ? "Katalozi" : "Catalogues"}>
           <div className="flex flex-col sm:flex.row gap-3 mx-1 items-center justify-center">
             {kataloziPdf.map((katalog) => (
@@ -48,6 +56,11 @@ export default function Proizvod({ proizvod }) {
             ))}
           </div>
         </Section>
+      )}
+      {galerijaObicna && galerijaObicna.length > 0 && (
+        <SectionColor naslov={router.locale === "hr" ? "Galerija" : "Gallery"}>
+          <Gallery galerija={galerijaObicna} />
+        </SectionColor>
       )}
     </main>
   );

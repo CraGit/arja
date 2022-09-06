@@ -5,7 +5,7 @@ const ContentWithImage = ({ slika, opis = "", opisNaslov = "" }) => {
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-96 lg:mb-0">
-        <div className="relative z-10 lg:py-8">
+        <div className="relative z-10 lg:py-6">
           <div className="relative h-64 sm:h-96 lg:h-full">
             <Image
               className="absolute inset-0 object-cover w-full h-full"
@@ -19,7 +19,7 @@ const ContentWithImage = ({ slika, opis = "", opisNaslov = "" }) => {
         <div className="relative flex items-center bg-gray-100">
           <span className="hidden lg:inset-y-0 lg:absolute lg:w-16 lg:bg-gray-50 lg:block lg:-left-16"></span>
 
-          <div className="p-8 sm:p-16 lg:p-24">
+          <div className="p-8 sm:p-16 lg:p-24 lg:py-36">
             <h2 className="text-2xl font-bold sm:text-3xl text-gray-900">
               {opisNaslov}
             </h2>

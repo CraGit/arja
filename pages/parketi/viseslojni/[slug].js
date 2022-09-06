@@ -6,13 +6,21 @@ import Section from "../../../components/Section";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
+import Gallery from "../../../components/Gallery";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 });
 export default function Proizvod({ proizvod }) {
-  const { naslov, galerijaSlider, opis, kataloziPdf, slikaCard } = proizvod;
+  const {
+    naslov,
+    galerijaSlider,
+    opis,
+    kataloziPdf,
+    slikaCard,
+    galerijaObicna,
+  } = proizvod;
 
   const router = useRouter();
   return (
@@ -48,6 +56,11 @@ export default function Proizvod({ proizvod }) {
             ))}
           </div>
         </Section>
+      )}
+      {galerijaObicna && galerijaObicna.length > 0 && (
+        <SectionColor naslov={router.locale === "hr" ? "Galerija" : "Gallery"}>
+          <Gallery galerija={galerijaObicna} />
+        </SectionColor>
       )}
     </main>
   );

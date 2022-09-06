@@ -21,7 +21,7 @@ const Hero = ({
         src={`https:${slika}`}
         priority
         quality={85}
-        alt={alt ? alt : "Activities and excursions in Croatia"}
+        alt={alt ? alt : "Aria Interiers"}
         layout="fill"
         objectFit="cover"
       />

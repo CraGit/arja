@@ -16,8 +16,8 @@ const MENU_ITEMS = [
     href: "/laminati-i-vinili",
   },
   {
-    name: { hr: "Terase i fasade", en: "Decking" },
-    href: "/terase-i-fasade",
+    name: { hr: "Vanjski podovi", en: "Decking" },
+    href: "/vanjski-i-podovi",
   },
   {
     name: { hr: "Popratni Materijali", en: "Materials" },
