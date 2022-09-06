@@ -7,21 +7,15 @@ const MessageSent = () => {
   return (
     <div>
       <Head>
-        <title>
-          Best Day Trips and Activities in Croatia | Best Price Guarantee |
-          Explore.hr - Only Good Spots
-        </title>
-        <meta name="description" content="Explore.hr" />
+        <title>Aria Interiers</title>
+        <meta name="description" content="Aria Interiers" />
         <meta name="robots" content="noindex"></meta>;
-        <meta
-          property="og:title"
-          content="Best Day Trips and Activities in Croatia | Best Price Guarantee | Explore.hr - Only Good Spots"
-        />
-        <meta
+        <meta property="og:title" content="Aria Interiers" />
+        {/* <meta
           property="og:image"
           content="https://explore.hr/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fmbkud2lk1r1a%2F54JtODSYu8GHHj8siUqSTb%2Ffc4e891ed5aa888b554d8b1be6f6c2f3%2Fbluecave.jpg"
-        />
-        <meta property="og:description" content="Explore.hr" />
+        /> */}
+        <meta property="og:description" content="Aria Interiers.hr" />
       </Head>
       <main className="my-16 md:mt-32">
         <Section
@@ -29,12 +23,12 @@ const MessageSent = () => {
           naslov={
             router.locale === "en"
               ? "Message has been sent successfully."
-              : "Message has been sent."
+              : "Poruka je uspješno poslana"
           }
           uvod={
             router.locale === "en"
               ? "We will get back to you as soon as possible."
-              : "We will get back to you as soon as possible."
+              : "Kontaktiramo Vas u najkraćem mogućem roku."
           }
         />
       </main>

@@ -3,23 +3,15 @@ import { useRouter } from "next/router";
 import HeroBar from "./HeroBar";
 import { Carousel } from "flowbite-react";
 
-const HeroSlider = ({
-  naslov,
-  podnaslov,
-  cijena,
-  cijenaTip,
-  podrucje,
-  trajanje,
-  galerija,
-}) => {
+const HeroSlider = ({ naslov, galerija }) => {
   const router = useRouter();
 
   return (
     <section className="flex flex-col items-center justify-center bg-gray-100 overflow-hidden shadow-lg relative -mx-2">
       <div className="h-full max-w-[80vw] flex flex-col justify-center items-center top-0  absolute z-20">
-        <p className="text-white text-lg sm:text-xl text-center mb-4 md:mb-8 tracking-widest text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-100">
+        {/* <p className="text-white text-lg sm:text-xl text-center mb-4 md:mb-8 tracking-widest text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-100">
           {podnaslov}
-        </p>
+        </p> */}
         <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-semibold text-center mb-8 md:mb-12 tracking-tight text-transparent bg-clip-text bg-gradient-to-br  from-white to-gray-100">
           {naslov}
         </h1>
@@ -43,16 +35,6 @@ const HeroSlider = ({
           ))}
         </Carousel>
       </div>
-
-      {/* <!-- text end --> */}
-      {cijena && (
-        <HeroBar
-          trajanje={trajanje}
-          cijena={cijena}
-          cijenaTip={cijenaTip}
-          podrucje={podrucje}
-        />
-      )}
     </section>
   );
 };

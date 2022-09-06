@@ -12,7 +12,6 @@ export default function Vrata({ vrata }) {
     slikaHero,
     slikaSobna,
     slikaProtuprovalna,
-    slikaProtupozarna,
   } = vrata;
   const router = useRouter();
   return (
@@ -25,25 +24,20 @@ export default function Vrata({ vrata }) {
       <SectionColor
         naslov={router.locale === "hr" ? "Vrsta vrata" : "Door type"}
       >
-        <div className="grid md:grid-cols-3 gap-3 mx-1">
+        <div className="grid md:grid-cols-2 gap-3 mx-1">
           <ImageCard
             naslov={router.locale === "hr" ? "Sobna vrata" : "Sobna"}
-            link="/vrata/sobna-vrata"
+            link="/vrata/sobna"
             slika={`https:${slikaSobna.fields.file.url}`}
           />
           <ImageCard
             naslov={
-              router.locale === "hr" ? "Protuprovalna vrata" : "Protuprovalna"
+              router.locale === "hr"
+                ? "Protuprovalna i protupožarna vrata"
+                : "Protuprovalna i protupožarna"
             }
-            link="/vrata/protuprovalna-vrata"
+            link="/vrata/protuprovalna-i-protupožarna"
             slika={`https:${slikaProtuprovalna.fields.file.url}`}
-          />
-          <ImageCard
-            naslov={
-              router.locale === "hr" ? "Protupožarna vrata" : "Protupožarna"
-            }
-            link="/vrata/protupozarna-vrata"
-            slika={`https:${slikaProtupozarna.fields.file.url}`}
           />
         </div>
       </SectionColor>

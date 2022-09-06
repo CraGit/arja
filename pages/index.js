@@ -76,7 +76,7 @@ const Home = ({ home }) => {
           </div>
         </Section>
         <SectionColor naslov={router.locale === "hr" ? "Partneri" : "Partners"}>
-          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-9 gap-4 mx-1 items-center">
+          <div className="flex flex-col md:flex-row gap-4 mx-1 items-center justify-center">
             {partneri.map((partner, index) => (
               <div key={index} className="px-16 py-2 md:p-0">
                 <Image src={`https:${partner.fields.file.url}`} alt="partneri" width={500} height={100}/>
