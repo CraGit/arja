@@ -19,7 +19,7 @@ const Footer = ({ slikaFooter }) => {
       <div className="px-4 py-16 sm:px-6 lg:px-8 lg:col-span-3">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
-            <p className="font-medium">
+            <div className="font-medium">
               <span className="text-xl tracking-widest uppercase underline underline-offset-8 decoration-zuta">
                 Abonos d.o.o. - SPLIT{" "}
               </span>
@@ -54,7 +54,7 @@ const Footer = ({ slikaFooter }) => {
                   </a>
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
           <div>
             <p className="font-medium">
@@ -100,7 +100,7 @@ const Footer = ({ slikaFooter }) => {
           <div className="flex mt-16 space-x-3">
             <a
               className="p-2 border rounded-full border-white/25 hover:opacity-75 cursor-pointer"
-              href
+              href="https://www.facebook.com/arja1interiers/"
               target="_blank"
               rel="noreferrer"
             >
@@ -120,7 +120,7 @@ const Footer = ({ slikaFooter }) => {
             </a>
             <a
               className="p-2 border rounded-full border-white/25 hover:opacity-75 cursor-pointer"
-              href
+              href="https://www.instagram.com/arja_interiers/"
               target="_blank"
               rel="noreferrer"
             >
