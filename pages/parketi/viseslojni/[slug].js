@@ -22,7 +22,6 @@ export default function Proizvod({ proizvod }) {
     slikaCard,
     galerijaObicna,
   } = proizvod;
-  console.log(kataloziPdf);
   const router = useRouter();
   return (
     <main className="overflow-hidden">

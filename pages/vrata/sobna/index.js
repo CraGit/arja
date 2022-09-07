@@ -9,7 +9,7 @@ export default function SobnaVrata({ stranica, podstranice }) {
   const { naslovHero, podnaslovHero, slikaHero, slikaVieslojni, slikaMasivni } =
     stranica;
   const router = useRouter();
-  console.log(podstranice);
+
   return (
     <>
       <Hero
