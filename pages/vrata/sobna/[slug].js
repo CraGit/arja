@@ -16,6 +16,7 @@ export default function Proizvod({ proizvod }) {
   const {
     naslov,
     galerijaSlider,
+    opisNaslov,
     opis,
     kataloziPdf,
     slikaCard,
@@ -28,10 +29,14 @@ export default function Proizvod({ proizvod }) {
       <HeroSlider naslov={naslov} galerija={galerijaSlider} />
       {opis && (
         <SectionColor>
-          <ContentWithImage slika={slikaCard} opis={opis} opisNaslov="" />
+          <ContentWithImage
+            slika={slikaCard}
+            opis={opis}
+            opisNaslov={opisNaslov}
+          />
         </SectionColor>
       )}
-      {kataloziPdf && (
+      {kataloziPdf && kataloziPdf.length > 0 && (
         <Section naslov={router.locale === "hr" ? "Katalozi" : "Catalogues"}>
           <div className="flex flex-col sm:flex.row gap-3 mx-1 items-center justify-center">
             {kataloziPdf.map((katalog) => (

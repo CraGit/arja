@@ -3,10 +3,11 @@ import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import SectionColor from "../components/SectionColor";
 import Head from "next/head";
 import Hero from "../components/Hero";
-import { useRouter } from "next/router";
+import Section from "../components/Section";
+import Gallery from "../components/Gallery";
 
 const Cijene = ({ stranica }) => {
-  const { naslovHero, tekst, slikaHero } = stranica;
+  const { naslovHero, tekst, slikaHero, galerija } = stranica;
 
   const text = documentToHtmlString(tekst);
   return (
@@ -34,6 +35,11 @@ const Cijene = ({ stranica }) => {
           ></div>
         </main>
       </SectionColor>
+      {galerija && galerija.length > 0 && (
+        <Section>
+          <Gallery galerija={galerija} />
+        </Section>
+      )}
     </div>
   );
 };

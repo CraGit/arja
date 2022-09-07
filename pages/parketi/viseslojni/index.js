@@ -12,7 +12,7 @@ export default function ViseslojniStranica({ stranica, podstranice }) {
   return (
     <>
       <Hero naslov={naslovHero} slika={slikaHero.fields.file.url} />
-      <SectionColor naslov={router.locale === "hr" ? "" : "Parquet type"}>
+      <SectionColor>
         <div className="grid md:grid-cols-2 gap-3 mx-1">
           {podstranice.length > 0 &&
             podstranice.map((podstranica) => (

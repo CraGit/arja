@@ -34,11 +34,13 @@ const Home = ({ home }) => {
         /> */}
         <meta property="og:description" content="Arja Interiers" />
       </Head>
+
       <Hero
         naslov={naslovHero}
         podnaslov={podnaslov}
         slika={slikaHero.fields.file.url}
       />
+
       <main>
         <SectionColor naslov={router.locale === "hr" ? "O nama" : "About us"}>
           <ContentWithImage
@@ -79,7 +81,12 @@ const Home = ({ home }) => {
           <div className="flex flex-col md:flex-row gap-4 mx-1 items-center justify-center">
             {partneri.map((partner, index) => (
               <div key={index} className="px-16 py-2 md:p-0">
-                <Image src={`https:${partner.fields.file.url}`} alt="partneri" width={500} height={100}/>
+                <Image
+                  src={`https:${partner.fields.file.url}`}
+                  alt="partneri"
+                  width={500}
+                  height={100}
+                />
               </div>
             ))}
           </div>

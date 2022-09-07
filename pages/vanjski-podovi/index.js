@@ -5,37 +5,42 @@ import Section from "../../components/Section";
 import { useRouter } from "next/router";
 import ImageCard from "../../components/ImageCard";
 
-export default function Vrata({ stranica }) {
+export default function VanjskiPodoviStranica({ stranica }) {
   const {
     naslovHero,
     podnaslovHero,
     slikaHero,
-    slikaSobna,
-    slikaProtuprovalna,
+    slikaWpcDecking,
+    slikaDrvniDecking,
+    slikaFasadneObloge,
   } = stranica;
   const router = useRouter();
+
   return (
     <>
       <Hero
         naslov={naslovHero}
         podnaslov={podnaslovHero}
-        slika={slikaHero.fields.file.url}
+        slika={slikaHero.fields.file.url || "/images/default.jpg"}
       />
       <SectionColor>
         <div className="grid md:grid-cols-2 gap-3 mx-1">
           <ImageCard
-            naslov={router.locale === "hr" ? "Sobna vrata" : "Sobna"}
-            link="/vrata/sobna"
-            slika={`https:${slikaSobna.fields.file.url}`}
+            naslov={router.locale === "hr" ? "WPC decking" : "WPC Decking"}
+            link="/vanjski-podovi/wpc-decking"
+            slika={`https:${slikaWpcDecking.fields.file.url}`}
+          />
+          <ImageCard
+            naslov={router.locale === "hr" ? "Drvni decking" : "Wooden Decking"}
+            link="/vanjski-podovi/drvni-decking"
+            slika={`https:${slikaDrvniDecking.fields.file.url}`}
           />
           <ImageCard
             naslov={
-              router.locale === "hr"
-                ? "Protuprovalna i protupožarna vrata"
-                : "Protuprovalna i protupožarna"
+              router.locale === "hr" ? "Fasadne obloge" : "Facade Covering"
             }
-            link="/vrata/protuprovalna-i-protupožarna"
-            slika={`https:${slikaProtuprovalna.fields.file.url}`}
+            link="/vanjski-podovi/fasadne-obloge"
+            slika={`https:${slikaFasadneObloge.fields.file.url}`}
           />
         </div>
       </SectionColor>
@@ -49,7 +54,7 @@ export async function getStaticProps({ locale }) {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
   const stranica = await client.getEntries({
-    content_type: "vrataStranica",
+    content_type: "vanjskiPodoviStranica",
     locale,
   });
 

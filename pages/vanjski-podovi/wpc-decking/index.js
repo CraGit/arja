@@ -5,17 +5,20 @@ import SectionColor from "../../../components/SectionColor";
 import { useRouter } from "next/router";
 import ImageCard from "../../../components/ImageCard";
 
-export default function SobnaVrata({ stranica, podstranice }) {
-  const { naslovHero, podnaslovHero, slikaHero, slikaVieslojni, slikaMasivni } =
-    stranica;
+export default function WpcDeckingStranica({ stranica, podstranice }) {
+  const { naslovHero, podnaslovHero, slikaHero } = stranica;
   const router = useRouter();
-  console.log(podstranice);
+
   return (
     <>
       <Hero
         naslov={naslovHero}
         podnaslov={podnaslovHero}
-        slika={slikaHero.fields.file.url}
+        slika={
+          slikaHero.fields.file.url
+            ? `https:${slikaHero.fields.file.url}`
+            : "/images/default.jpg"
+        }
       />
       <SectionColor>
         <div className="grid md:grid-cols-2 gap-3 mx-1">
@@ -24,7 +27,7 @@ export default function SobnaVrata({ stranica, podstranice }) {
               <ImageCard
                 key={podstranica.sys.id}
                 naslov={podstranica.fields.naslov}
-                link={`/vrata/sobna/${podstranica.fields.slug}`}
+                link={`/vanjski-podovi/wpc-decking/${podstranica.fields.slug}`}
                 slika={`https:${podstranica.fields.slikaCard.fields.file.url}`}
               />
             ))}
@@ -33,19 +36,18 @@ export default function SobnaVrata({ stranica, podstranice }) {
     </>
   );
 }
-
 export async function getStaticProps({ locale }) {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
   const stranica = await client.getEntries({
-    content_type: "sobnaVrataStranica",
+    content_type: "wpcDeckingStranica",
     locale,
   });
   const podstranice = await client.getEntries({
     content_type: "proizvod",
-    "fields.spadaPod": "Sobna vrata",
+    "fields.spadaPod": "WPC decking",
     locale,
   });
 

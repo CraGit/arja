@@ -5,15 +5,11 @@ import Section from "../../components/Section";
 import { useRouter } from "next/router";
 import ImageCard from "../../components/ImageCard";
 
-export default function Vrata({ stranica }) {
-  const {
-    naslovHero,
-    podnaslovHero,
-    slikaHero,
-    slikaSobna,
-    slikaProtuprovalna,
-  } = stranica;
+export default function LaminatiIViniliStranica({ stranica }) {
+  const { naslovHero, podnaslovHero, slikaHero, slikaLaminati, slikaVinili } =
+    stranica;
   const router = useRouter();
+
   return (
     <>
       <Hero
@@ -24,18 +20,14 @@ export default function Vrata({ stranica }) {
       <SectionColor>
         <div className="grid md:grid-cols-2 gap-3 mx-1">
           <ImageCard
-            naslov={router.locale === "hr" ? "Sobna vrata" : "Sobna"}
-            link="/vrata/sobna"
-            slika={`https:${slikaSobna.fields.file.url}`}
+            naslov={router.locale === "hr" ? "Laminati" : "Laminates"}
+            link="/laminati-i-vinili/laminati"
+            slika={`https:${slikaLaminati.fields.file.url}`}
           />
           <ImageCard
-            naslov={
-              router.locale === "hr"
-                ? "Protuprovalna i protupožarna vrata"
-                : "Protuprovalna i protupožarna"
-            }
-            link="/vrata/protuprovalna-i-protupožarna"
-            slika={`https:${slikaProtuprovalna.fields.file.url}`}
+            naslov={router.locale === "hr" ? "Vinili" : "Vinyls"}
+            link="/laminati-i-vinili/vinili"
+            slika={`https:${slikaVinili.fields.file.url}`}
           />
         </div>
       </SectionColor>
@@ -49,7 +41,7 @@ export async function getStaticProps({ locale }) {
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
   });
   const stranica = await client.getEntries({
-    content_type: "vrataStranica",
+    content_type: "laminatiIViniliStranica",
     locale,
   });
 

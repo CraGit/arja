@@ -17,9 +17,7 @@ export default function Parketi({ parketi }) {
         podnaslov={podnaslovHero}
         slika={slikaHero.fields.file.url}
       />
-      <SectionColor
-        naslov={router.locale === "hr" ? "Vrsta parketa" : "Parquet type"}
-      >
+      <SectionColor>
         <div className="grid md:grid-cols-2 gap-3 mx-1">
           <ImageCard
             naslov="Višeslojni parketi"

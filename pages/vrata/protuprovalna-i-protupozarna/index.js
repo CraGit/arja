@@ -20,13 +20,7 @@ export default function ProtuprovalnaIProtupozarnaStranica({
         podnaslov={podnaslovHero}
         slika={slikaHero.fields.file.url}
       />
-      <SectionColor
-        naslov={
-          router.locale === "hr"
-            ? "Protuprovalna i protupožarna vrata"
-            : "Anti-theft and fire doors"
-        }
-      >
+      <SectionColor>
         <div className="grid md:grid-cols-2 gap-3 mx-1">
           {podstranica.length > 0 &&
             podstranice.map((podstranica) => (

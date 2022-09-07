@@ -16,7 +16,7 @@ export default function MasivniStranica({ stranica, podstranice }) {
         podnaslov={podnaslovHero}
         slika={slikaHero.fields.file.url}
       />
-      <SectionColor naslov={router.locale === "hr" ? "" : "Parquet type"}>
+      <SectionColor>
         <div className="grid md:grid-cols-2 gap-3 mx-1">
           {podstranice.length > 0 &&
             podstranice.map((podstranica) => (

@@ -17,7 +17,7 @@ const MENU_ITEMS = [
   },
   {
     name: { hr: "Vanjski podovi", en: "Decking" },
-    href: "/vanjski-i-podovi",
+    href: "/vanjski-podovi",
   },
   {
     name: { hr: "Popratni Materijali", en: "Materials" },
