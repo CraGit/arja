@@ -30,7 +30,7 @@ const Cijene = ({ stranica }) => {
       <SectionColor>
         <main>
           <div
-            className="bg-black text-white max-w-7xl mx-auto px-2 prose lg:prose-xl lg:prose-headings:text-white"
+            className="bg-black text-white max-w-7xl mx-auto px-2 prose lg:prose-xl prose-headings:text-white"
             dangerouslySetInnerHTML={{ __html: text }}
           ></div>
         </main>
