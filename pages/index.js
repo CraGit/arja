@@ -67,12 +67,12 @@ const Home = ({ home }) => {
                   ? "Laminati i vinili"
                   : "Laminate & Vinyl"
               }
-              link="/lmaminati-i-vinili"
+              link="/laminati-i-vinili"
               slika="/images/naslovnica/laminat.jpg"
             />
             <ImageCard
-              naslov={router.locale === "hr" ? "Terase i fasade" : "Decking"}
-              link="/terase-i-fasade"
+              naslov={router.locale === "hr" ? "Vanjski podovi" : "Decking"}
+              link="/vanjski-podovi"
               slika="/images/naslovnica/decking.jpg"
             />
           </div>
