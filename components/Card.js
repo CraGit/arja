@@ -18,7 +18,7 @@ const Card = ({
     <Link href={`/activities/${slug}`}>
       <a className="p-3 rounded-lg uppercase shadow-sm shadow-indigo-100 flex flex-col hover:scale-105 transition-transform duration-150 ease-in-out h-96">
         <Image
-          alt="Explore.hr One Day Trips and Activities"
+          alt="Aria Interiers slika"
           src={`https:${galerija[0].fields.file.url}`}
           className="object-cover w-full h-56 rounded-md hover:opacity-90"
           width={450}

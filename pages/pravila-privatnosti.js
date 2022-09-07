@@ -13,10 +13,7 @@ const PrivacyPolicy = ({ privacyPolicy }) => {
         <title>Privacy Policy |  Aria Interiers</title>
         <meta name="description" content="Aria Interiers" />
         <meta property="og:title" content="" />
-        {/* <meta
-          property="og:image"
-          content="https://explore.hr/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fmbkud2lk1r1a%2F54JtODSYu8GHHj8siUqSTb%2Ffc4e891ed5aa888b554d8b1be6f6c2f3%2Fbluecave.jpg"
-        /> */}
+ 
         <meta property="og:description" content="" />
       </Head>
       <main>
