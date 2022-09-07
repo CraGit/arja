@@ -12,7 +12,7 @@ export default function ProtuprovalnaIProtupozarnaStranica({
   const { naslovHero, podnaslovHero, slikaHero, slikaVieslojni, slikaMasivni } =
     stranica;
   const router = useRouter();
-  console.log(podstranice);
+
   return (
     <>
       <Hero
@@ -22,7 +22,7 @@ export default function ProtuprovalnaIProtupozarnaStranica({
       />
       <SectionColor>
         <div className="grid md:grid-cols-2 gap-3 mx-1">
-          {podstranica.length > 0 &&
+          {podstranice.length > 0 &&
             podstranice.map((podstranica) => (
               <ImageCard
                 key={podstranica.sys.id}
@@ -48,7 +48,7 @@ export async function getStaticProps({ locale }) {
   });
   const podstranice = await client.getEntries({
     content_type: "proizvod",
-    "fields.spadaPod": "Protuprovalna/protupozarna vrata",
+    "fields.spadaPod": "Protuprovalna/Protupozarna vrata",
     locale,
   });
 

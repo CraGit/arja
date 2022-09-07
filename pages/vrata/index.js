@@ -34,7 +34,7 @@ export default function Vrata({ stranica }) {
                 ? "Protuprovalna i protupožarna vrata"
                 : "Protuprovalna i protupožarna"
             }
-            link="/vrata/protuprovalna-i-protupožarna"
+            link="/vrata/protuprovalna-i-protupozarna"
             slika={`https:${slikaProtuprovalna.fields.file.url}`}
           />
         </div>
