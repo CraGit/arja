@@ -14,11 +14,7 @@ export default function WpcDeckingStranica({ stranica, podstranice }) {
       <Hero
         naslov={naslovHero}
         podnaslov={podnaslovHero}
-        slika={
-          slikaHero.fields.file.url
-            ? `https:${slikaHero.fields.file.url}`
-            : "/images/default.jpg"
-        }
+        slika={slikaHero.fields.file.url}
       />
       <SectionColor>
         <div className="grid md:grid-cols-2 gap-3 mx-1">

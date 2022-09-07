@@ -1,12 +1,12 @@
 import { createClient } from "contentful";
-import HeroSlider from "../../../components/HeroSlider";
-import ContentWithImage from "../../../components/ContentWithImage";
-import SectionColor from "../../../components/SectionColor";
-import Section from "../../../components/Section";
+import HeroSlider from "../../components/HeroSlider";
+import ContentWithImage from "../../components/ContentWithImage";
+import SectionColor from "../../components/SectionColor";
+import Section from "../../components/Section";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import Gallery from "../../../components/Gallery";
+import Gallery from "../../components/Gallery";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -22,7 +22,6 @@ export default function Proizvod({ proizvod }) {
     slikaCard,
     galerijaObicna,
   } = proizvod;
-  console.log(kataloziPdf);
   const router = useRouter();
   return (
     <main className="overflow-hidden">
