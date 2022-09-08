@@ -25,13 +25,14 @@ const Home = ({ home }) => {
   return (
     <div>
       <Head>
-        <title>Arja Interiers</title>
-        <meta name="description" content="Arja Interiers" />
+        <title>{naslovHero} - Arja Interiers</title>
+        <meta
+          name="description"
+          content="Svojom visokokvalitetnom ponudom ARJA interiers prednjači u ponudi
+vrhunskih podnih obloga od drva, ulaznih vrata, protuprovalnih vrata, sobnih
+vrata i drvene građevinske stolarije."
+        />
         <meta property="og:title" content="Arja Interiers" />
-        {/* <meta
-          property="og:image"
-          content="https://images.ctfassets.net/mbkud2lk1r1a/54JtODSYu8GHHj8siUqSTb/fc4e891ed5aa888b554d8b1be6f6c2f3/bluecave.webp"
-        /> */}
         <meta property="og:description" content="Arja Interiers" />
       </Head>
 

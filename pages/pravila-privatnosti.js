@@ -10,10 +10,13 @@ const PrivacyPolicy = ({ privacyPolicy }) => {
   return (
     <div>
       <Head>
-        <title>Privacy Policy |  Aria Interiers</title>
-        <meta name="description" content="Aria Interiers" />
+      <title>{naslov} - Arja Interiers</title>
+        <meta
+          name="description"
+          content="Sve vezano za pravila privatnosti Arja Interiersa"
+        />
         <meta property="og:title" content="" />
- 
+
         <meta property="og:description" content="" />
       </Head>
       <main>

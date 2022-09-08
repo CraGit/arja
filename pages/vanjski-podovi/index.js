@@ -1,10 +1,10 @@
 import Hero from "../../components/Hero";
 import { createClient } from "contentful";
 import SectionColor from "../../components/SectionColor";
-import Section from "../../components/Section";
+
 import { useRouter } from "next/router";
 import ImageCard from "../../components/ImageCard";
-
+import Head from "next/head";
 export default function VanjskiPodoviStranica({ stranica }) {
   const {
     naslovHero,
@@ -18,6 +18,10 @@ export default function VanjskiPodoviStranica({ stranica }) {
 
   return (
     <>
+      <Head>
+        <title>{naslovHero}- Arja Interiers</title>
+        <meta name="description" content="Vanjski podovi iz naše ponude" />
+      </Head>
       <Hero
         naslov={naslovHero}
         podnaslov={podnaslovHero}

@@ -7,11 +7,13 @@ const MessageSent = () => {
   return (
     <div>
       <Head>
-        <title>Aria Interiers</title>
-        <meta name="description" content="Aria Interiers" />
+        <title>Poruka poslana - Arja Interiers</title>
+        <meta
+          name="description"
+          content="Poruka je usješno poslana. Hvala na interesu."
+        />
         <meta name="robots" content="noindex"></meta>;
         <meta property="og:title" content="Aria Interiers" />
-  
         <meta property="og:description" content="Aria Interiers.hr" />
       </Head>
       <main className="my-16 md:mt-32">

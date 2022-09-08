@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import Section from "../components/Section";
 import Head from "next/head";
-import { createClient } from "contentful";
+
 const Kontakt = () => {
   const router = useRouter();
   const [name, setName] = useState("");
@@ -53,8 +53,11 @@ const Kontakt = () => {
   return (
     <div>
       <Head>
-        <title>Contact Us | Arja Interiers</title>
-        <meta name="description" content="" />
+        <title>Kontakt - Arja Interiers</title>
+        <meta
+          name="description"
+          content="Pošaljite nam poruku s bilo kojim pitanjem vezanim za naše usluge."
+        />
         <meta property="og:title" content="Arja Interiers" />
 
         <meta property="og:description" content="Arja Interiers" />

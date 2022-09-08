@@ -10,13 +10,13 @@ const Galerija = ({ stranica }) => {
   return (
     <div className="bg-black">
       <Head>
-        <title>Galerija | Aria Interiers</title>
-        <meta name="description" content="Aria Interiers" />
+      <title>{naslovHero} - Arja Interiers</title>
+        <meta
+          name="description"
+          content="Galerija prijašnjih radova Arja Interiersa"
+        />
         <meta property="og:title" content="Aria Interiers" />
-        {/* <meta
-          property="og:image"
-          content="https://images.ctfassets.net/jpzo3be8bh1g/2vOF7yKR0UKqBaIomKPMBp/f10ae9c88041b69f475876e38ccec7b0/raftingnacetinislika11.webp"
-        /> */}
+
         <meta property="og:description" content="Aria Interiers" />
       </Head>
       <Hero

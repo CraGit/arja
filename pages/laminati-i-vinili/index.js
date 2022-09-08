@@ -4,7 +4,7 @@ import SectionColor from "../../components/SectionColor";
 import Section from "../../components/Section";
 import { useRouter } from "next/router";
 import ImageCard from "../../components/ImageCard";
-
+import Head from "next/head";
 export default function LaminatiIViniliStranica({ stranica }) {
   const { naslovHero, podnaslovHero, slikaHero, slikaLaminati, slikaVinili } =
     stranica;
@@ -12,6 +12,10 @@ export default function LaminatiIViniliStranica({ stranica }) {
 
   return (
     <>
+      <Head>
+        <title>{naslovHero}- Arja Interiers</title>
+        <meta name="description" content="Laminati i vinili iz naše ponude" />
+      </Head>
       <Hero
         naslov={naslovHero}
         podnaslov={podnaslovHero}

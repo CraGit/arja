@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import Gallery from "../../../components/Gallery";
+import Head from "next/head";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -22,9 +23,14 @@ export default function Proizvod({ proizvod }) {
     slikaCard,
     galerijaObicna,
   } = proizvod;
+
   const router = useRouter();
   return (
     <main className="overflow-hidden">
+      <Head>
+        <title>{naslov} - Arja Interiers</title>
+        <meta name="description" content={opis} />
+      </Head>
       <HeroSlider naslov={naslov} galerija={galerijaSlider} />
       {opis && (
         <SectionColor>

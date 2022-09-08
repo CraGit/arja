@@ -1,7 +1,7 @@
 import Hero from "../../../components/Hero";
 import { createClient } from "contentful";
 import SectionColor from "../../../components/SectionColor";
-
+import Head from "next/head";
 import { useRouter } from "next/router";
 import ImageCard from "../../../components/ImageCard";
 
@@ -11,6 +11,10 @@ export default function MasivniStranica({ stranica, podstranice }) {
 
   return (
     <>
+      <Head>
+        <title>{naslovHero}- Arja Interiers</title>
+        <meta name="description" content="Masivni parketi iz naše ponude" />
+      </Head>
       <Hero
         naslov={naslovHero}
         podnaslov={podnaslovHero}

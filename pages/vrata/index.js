@@ -4,7 +4,7 @@ import SectionColor from "../../components/SectionColor";
 import Section from "../../components/Section";
 import { useRouter } from "next/router";
 import ImageCard from "../../components/ImageCard";
-
+import Head from "next/head";
 export default function Vrata({ stranica }) {
   const {
     naslovHero,
@@ -16,6 +16,13 @@ export default function Vrata({ stranica }) {
   const router = useRouter();
   return (
     <>
+      <Head>
+        <title>{naslovHero} - Arja Interiers</title>
+        <meta name="description" content="Sve vrste vrata" />
+        <meta property="og:title" content="" />
+
+        <meta property="og:description" content="" />
+      </Head>
       <Hero
         naslov={naslovHero}
         podnaslov={podnaslovHero}

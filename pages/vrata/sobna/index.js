@@ -4,7 +4,7 @@ import SectionColor from "../../../components/SectionColor";
 
 import { useRouter } from "next/router";
 import ImageCard from "../../../components/ImageCard";
-
+import Head from "next/head";
 export default function SobnaVrata({ stranica, podstranice }) {
   const { naslovHero, podnaslovHero, slikaHero, slikaVieslojni, slikaMasivni } =
     stranica;
@@ -12,6 +12,10 @@ export default function SobnaVrata({ stranica, podstranice }) {
 
   return (
     <>
+      <Head>
+        <title>{naslovHero}- Arja Interiers</title>
+        <meta name="description" content="Sobna vrata iz naše ponude" />
+      </Head>
       <Hero
         naslov={naslovHero}
         podnaslov={podnaslovHero}

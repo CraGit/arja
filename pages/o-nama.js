@@ -13,13 +13,14 @@ const Cijene = ({ stranica }) => {
   return (
     <div>
       <Head>
-        <title>O nama |Aria Interiers</title>
-        <meta name="description" content="" />
+        <title>{naslovHero} - Arja Interiers</title>
+        <meta
+          name="description"
+          content="Već više od 20 godina ARJA interiers nameće se kao snažan konkurent na
+          hrvatskom tržištu."
+        />
         <meta property="og:title" content="" />
-        {/* <meta
-          property="og:image"
-          content="https://images.ctfassets.net/jpzo3be8bh1g/2vOF7yKR0UKqBaIomKPMBp/f10ae9c88041b69f475876e38ccec7b0/raftingnacetinislika11.webp"
-        /> */}
+
         <meta property="og:description" content="" />
       </Head>
       <Hero

@@ -24,8 +24,13 @@ const Footer = ({ slikaFooter }) => {
                 Abonos d.o.o. - SPLIT{" "}
               </span>
               <ul className="mt-2 space-y-1">
-                <li>Mostarska ulica 1</li>
-                <li>21000 Split</li>
+                <a
+                  href="https://www.google.com/maps?q=ARJA+interiers,+Mostarska+ul.+1,+21000,+Split&ftid=0x13355e6a5c03a121:0xf05df8d824668c48&hl=hr-HR&gl=hr&entry=gps&g_ep=CAISBjYuMzMuMRgAINeCAw%3D%3D&g_st=iw"
+                  className="hover:opacity-75 underline underline-offset-4 decoration-dotted"
+                >
+                  <li>Mostarska ulica 1</li>
+                  <li>21000 Split</li>
+                </a>
                 <li>
                   <a
                     className="mt-2 hover:opacity-75 underline underline-offset-4 decoration-dotted"
@@ -57,13 +62,18 @@ const Footer = ({ slikaFooter }) => {
             </div>
           </div>
           <div>
-            <p className="font-medium">
+            <div className="font-medium">
               <span className="text-xl tracking-widest uppercase underline underline-offset-8 decoration-zuta">
                 Internus d.o.o. - ZADAR{" "}
               </span>
               <ul className="mt-2 space-y-1">
-                <li>Hrvatskog sabora 26</li>
-                <li>23000 Zadar</li>
+                <a
+                  href="https://www.google.com/maps/place/INTERNUS+d.o.o./@44.1281398,15.2530757,17z/data=!3m1!4b1!4m5!3m4!1s0x4761f077fef3b547:0x409fa87762da9120!8m2!3d44.1281012!4d15.2551894?hl=hr-HR"
+                  className="hover:opacity-75 underline underline-offset-4 decoration-dotted"
+                >
+                  <li>Hrvatskog sabora 26</li>
+                  <li>23000 Zadar</li>
+                </a>
                 <li>
                   <a
                     className="mt-2 hover:opacity-75 underline underline-offset-4 decoration-dotted"
@@ -94,7 +104,7 @@ const Footer = ({ slikaFooter }) => {
                   </a>
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
 
           <div className="flex mt-16 space-x-3">
