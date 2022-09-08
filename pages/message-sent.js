@@ -18,7 +18,7 @@ const MessageSent = () => {
       </Head>
       <main className="my-16 md:mt-32">
         <Section
-          podnaslov={router.locale === "en" ? "Thank you" : "Grazie"}
+          podnaslov={router.locale === "en" ? "Thank you" : "Hvala"}
           naslov={
             router.locale === "en"
               ? "Message has been sent successfully."
@@ -27,7 +27,7 @@ const MessageSent = () => {
           uvod={
             router.locale === "en"
               ? "We will get back to you as soon as possible."
-              : "Kontaktiramo Vas u najkraćem mogućem roku."
+              : "Kontaktiramo ćemo Vas u najkraćem mogućem roku."
           }
         />
       </main>
