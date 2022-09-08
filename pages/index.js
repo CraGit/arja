@@ -19,6 +19,11 @@ const Home = ({ home }) => {
     naslovONama,
     tekstONama,
     slikaONama,
+    slikaParketi,
+    slikaVrata,
+    slikaLaminatiIVinili,
+    slikaVanjskiPodovi,
+    slikaPopratniMaterijali,
     partneri,
   } = home;
 
@@ -51,16 +56,16 @@ vrata i drvene građevinske stolarije."
           />
         </SectionColor>
         <Section naslov={router.locale === "hr" ? "Proizvodi" : "Products"}>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 mx-1">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 mx-1">
             <ImageCard
               naslov={router.locale === "hr" ? "Parketi" : "Parquet"}
               link="/parketi"
-              slika="/images/naslovnica/parket.jpg"
+              slika={`https:${slikaParketi.fields.file.url}`}
             />
             <ImageCard
               naslov={router.locale === "hr" ? "Vrata" : "Doors"}
               link="/vrata"
-              slika="/images/naslovnica/vrata.jpg"
+              slika={`https:${slikaVrata.fields.file.url}`}
             />
             <ImageCard
               naslov={
@@ -69,12 +74,19 @@ vrata i drvene građevinske stolarije."
                   : "Laminate & Vinyl"
               }
               link="/laminati-i-vinili"
-              slika="/images/naslovnica/laminat.jpg"
+              slika={`https:${slikaLaminatiIVinili.fields.file.url}`}
             />
             <ImageCard
               naslov={router.locale === "hr" ? "Vanjski podovi" : "Decking"}
               link="/vanjski-podovi"
-              slika="/images/naslovnica/decking.jpg"
+              slika={`https:${slikaVanjskiPodovi.fields.file.url}`}
+            />
+            <ImageCard
+              naslov={
+                router.locale === "hr" ? "Popratni materijal" : "Materials"
+              }
+              link="/popratni-materijal"
+              slika={`https:${slikaPopratniMaterijali.fields.file.url}`}
             />
           </div>
         </Section>
