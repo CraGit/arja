@@ -8,7 +8,7 @@ async function sendEmail(req, res) {
       to: "abonos.st@gmail.com", // Your email where you'll receive emails
       from: "arja@arja.hr", // your website email address here
       replyTo: req.body.email,
-      subject: `Aria.hr - Upit sa web stranice`,
+      subject: `Aria.hr - Upit s web stranice`,
       html: `Ime: <strong>${req.body.name}</strong><br/>
       Email: <strong>${req.body.email}</strong><br/>
       Mobitel: <strong>${req.body.phone}</strong><br/>

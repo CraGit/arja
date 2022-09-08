@@ -10,7 +10,7 @@ const MessageSent = () => {
         <title>Poruka poslana - Arja Interiers</title>
         <meta
           name="description"
-          content="Poruka je usješno poslana. Hvala na interesu."
+          content="Poruka je uspješno poslana. Hvala na interesu."
         />
         <meta name="robots" content="noindex"></meta>;
         <meta property="og:title" content="Aria Interiers" />
