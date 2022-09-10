@@ -32,11 +32,12 @@ const Footer = ({ slikaFooter }) => {
                   <li>21000 Split</li>
                 </a>
                 <li>
+                  
                   <a
                     className="mt-2 hover:opacity-75 underline underline-offset-4 decoration-dotted"
                     href="tel:+385912288232"
                   >
-                    Nino: 091 228 82 32
+                  Mob.:  091 228 82 32
                   </a>
                 </li>
 
@@ -44,9 +45,9 @@ const Footer = ({ slikaFooter }) => {
                   <a
                     className="mt-2 
                     hover:opacity-75 underline underline-offset-4 decoration-dotted"
-                    href="tel:+385919280241"
+                    href="tel:+385915276184"
                   >
-                    Božidar: 091 928 0241
+                  Mob.: 091 527 61 84
                   </a>
                 </li>
                 <li>
@@ -89,9 +90,9 @@ const Footer = ({ slikaFooter }) => {
                   <a
                     className="mt-2 
                     hover:opacity-75 underline underline-offset-4 decoration-dotted"
-                    href="tel:+385913214577"
+                    href="tel:+385913214567"
                   >
-                    Danijel: 091 3214 577
+                    Mob.: 091 321 45 67
                   </a>
                 </li>
                 <li>

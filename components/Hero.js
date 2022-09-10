@@ -36,7 +36,7 @@ const Hero = ({
         <p className=" text-lg font-light sm:text-xl text-center mb-1 md:mb-4 tracking-widest uppercase text-white">
           {podnaslov}
         </p>
-        <h1 className=" text-5xl md:text-6xl font-semibold text-center mb-8 md:mb-12 tracking-tight text-white underline underline-offset-8 decoration-zuta">
+        <h1 className=" text-5xl md:text-6xl font-semibold text-center mb-8 md:mb-12 tracking-tight text-white">
           {naslov}
         </h1>
 

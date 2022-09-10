@@ -8,7 +8,7 @@ const SectionColor = ({ children, naslov, podnaslov, uvod }) => {
           </p>
         )}
         {naslov && (
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl  mb-12 sm:mb-16 text-center underline underline-offset-8 decoration-zuta">
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl  mb-12 sm:mb-16 text-center">
             {naslov}
           </h2>
         )}

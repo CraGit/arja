@@ -8,7 +8,7 @@ const Section = ({ children, naslov, podnaslov, uvod }) => {
           </p>
         )}
         {naslov && (
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl text-center underline underline-offset-8 decoration-zuta mb-12 sm:mb-16 ">
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl text-center mb-12 sm:mb-16 ">
             {naslov}
           </h2>
         )}
