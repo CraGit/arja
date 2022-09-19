@@ -7,9 +7,24 @@ export default function Gallery({ galerija }) {
   const router = useRouter();
   const [clickedImage, setClickedImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(null);
+  //change state of clickedImage on arrow key press
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowRight") {
+        handleRotationRight();
+      } else if (e.key === "ArrowLeft") {
+        handleRotationLeft();
+      } else if (e.key === "Escape") {
+        setClickedImage(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [clickedImage]);
 
   function handleClick(item, index) {
-    console.log("nakon klika na sliku", index);
     setClickedImage(item);
     setCurrentImageIndex(index);
   }
