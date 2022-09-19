@@ -13,7 +13,7 @@ export default function Parketi({ parketi }) {
   return (
     <>
       <Head>
-        <title>{naslovHero}- Arja Interiers</title>
+        <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta name="description" content="Vrste parketa iz naše ponude" />
       </Head>
       <Hero

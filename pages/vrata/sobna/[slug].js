@@ -28,7 +28,7 @@ export default function Proizvod({ proizvod }) {
   return (
     <main className="overflow-hidden">
       <Head>
-        <title>{naslov} - Arja Interiers</title>
+      <title>{`${naslov} - Arja Interiers`}</title>
         <meta name="description" content={opis} />
       </Head>
       <HeroSlider naslov={naslov} galerija={galerijaSlider} />
@@ -39,6 +39,11 @@ export default function Proizvod({ proizvod }) {
             opis={opis}
             opisNaslov={opisNaslov}
           />
+        </SectionColor>
+      )}
+      {galerijaObicna && galerijaObicna.length > 0 && (
+        <SectionColor naslov={router.locale === "hr" ? "Galerija" : "Gallery"}>
+          <Gallery galerija={galerijaObicna} />
         </SectionColor>
       )}
       {kataloziPdf && kataloziPdf.length > 0 && (
@@ -66,11 +71,6 @@ export default function Proizvod({ proizvod }) {
             ))}
           </div>
         </Section>
-      )}
-      {galerijaObicna && galerijaObicna.length > 0 && (
-        <SectionColor naslov={router.locale === "hr" ? "Galerija" : "Gallery"}>
-          <Gallery galerija={galerijaObicna} />
-        </SectionColor>
       )}
     </main>
   );

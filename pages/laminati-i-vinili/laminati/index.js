@@ -12,7 +12,7 @@ export default function LaminatiStranica({ stranica, podstranice }) {
   return (
     <>
       <Head>
-        <title>{naslovHero}- Arja Interiers</title>
+        <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta name="description" content="Laminati iz naše ponude" />
       </Head>
       <Hero

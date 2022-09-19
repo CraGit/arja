@@ -13,7 +13,7 @@ export default function SobnaVrata({ stranica, podstranice }) {
   return (
     <>
       <Head>
-        <title>{naslovHero}- Arja Interiers</title>
+        <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta name="description" content="Sobna vrata iz naše ponude" />
       </Head>
       <Hero

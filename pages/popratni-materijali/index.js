@@ -12,7 +12,7 @@ export default function PopratniMaterijaliStranica({ stranica, podstranice }) {
   return (
     <>
       <Head>
-        <title>{naslovHero}- Arja Interiers</title>
+        <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta name="description" content="Popratni materijali iz naše ponude" />
       </Head>
       <Hero

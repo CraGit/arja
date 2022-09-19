@@ -11,8 +11,8 @@ export default function WpcDeckingStranica({ stranica, podstranice }) {
 
   return (
     <>
-     <Head>
-        <title>{naslovHero}- Arja Interiers</title>
+      <Head>
+        <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta name="description" content="WPC decking iz naše ponude" />
       </Head>
       <Hero

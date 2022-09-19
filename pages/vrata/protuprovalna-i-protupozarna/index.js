@@ -16,7 +16,7 @@ export default function ProtuprovalnaIProtupozarnaStranica({
   return (
     <>
       <Head>
-        <title>{naslovHero}- Arja Interiers</title>
+        <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta
           name="description"
           content="Protuprovalna i protupožarna vrata iz naše ponude."

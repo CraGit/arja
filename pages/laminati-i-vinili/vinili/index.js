@@ -12,7 +12,7 @@ export default function ViniliStranica({ stranica, podstranice }) {
   return (
     <>
       <Head>
-        <title>{naslovHero}- Arja Interiers</title>
+        <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta name="description" content="Vinili iz naše ponude" />
       </Head>
       <Hero

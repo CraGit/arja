@@ -12,7 +12,7 @@ export default function ViseslojniStranica({ stranica, podstranice }) {
   return (
     <>
       <Head>
-        <title>{naslovHero}- Arja Interiers</title>
+        <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta name="description" content="Višeslojni parketi iz naše ponude" />
       </Head>
       <Hero naslov={naslovHero} slika={slikaHero.fields.file.url} />

@@ -19,7 +19,7 @@ export default function VanjskiPodoviStranica({ stranica }) {
   return (
     <>
       <Head>
-        <title>{naslovHero}- Arja Interiers</title>
+        <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta name="description" content="Vanjski podovi iz naše ponude" />
       </Head>
       <Hero

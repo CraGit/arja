@@ -13,7 +13,7 @@ const Header = () => {
   const toggleMobileNav = () => setMobileNavOpened(!mobileNavOpened);
 
   return (
-    <header className="sticky top-0 z-50 bg-black text-white opacity-95">
+    <header className="sticky top-0 z-30 bg-black text-white opacity-95">
       <div className="flex  items-center justify-between h-28 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
         <div className="flex items-center w-full">
           <Link href="/" locale={router.local}>
@@ -88,7 +88,7 @@ const Header = () => {
           <nav aria-label="Mobile Menu">
             <ul
               onClick={toggleMobileNav}
-              className={`bg-black/90 flex flex-col text-2xl tracking-wide justify-center fixed top-0 left-0 w-full h-full z-50 items-end px-4 translate-x-full ${
+              className={`bg-black/90 flex flex-col text-2xl tracking-wide justify-center fixed top-0 left-0 w-full h-full z-30 items-end px-4 translate-x-full ${
                 !mobileNavOpened
                   ? "opacity-0"
                   : "opacity-100 -translate-x-0 ease-in-out"

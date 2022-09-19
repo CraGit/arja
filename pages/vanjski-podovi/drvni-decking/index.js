@@ -12,7 +12,7 @@ export default function DrvniDeckingStranica({ stranica, podstranice }) {
   return (
     <>
       <Head>
-        <title>{naslovHero}- Arja Interiers</title>
+        <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta name="description" content="Drvni decking iz naše ponude" />
       </Head>
       <Hero

@@ -12,7 +12,7 @@ export default function FasadneOblogeStranica({ stranica, podstranice }) {
   return (
     <>
       <Head>
-        <title>{naslovHero}- Arja Interiers</title>
+        <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta name="description" content="Fasadne obloge iz naše ponude" />
       </Head>
       <Hero

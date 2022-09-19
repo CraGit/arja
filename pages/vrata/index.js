@@ -31,7 +31,7 @@ export default function Vrata({ stranica }) {
       <SectionColor>
         <div className="grid md:grid-cols-2 gap-3 mx-1">
           <ImageCard
-            naslov={router.locale === "hr" ? "Sobna vrata" : "Sobna"}
+            naslov={router.locale === "hr" ? "Sobna vrata" : "Room doors"}
             link="/vrata/sobna"
             slika={`https:${slikaSobna.fields.file.url}`}
           />
@@ -39,7 +39,7 @@ export default function Vrata({ stranica }) {
             naslov={
               router.locale === "hr"
                 ? "Protuprovalna i protupožarna vrata"
-                : "Protuprovalna i protupožarna"
+                : "Anti-theft and fireproof doors"
             }
             link="/vrata/protuprovalna-i-protupozarna"
             slika={`https:${slikaProtuprovalna.fields.file.url}`}
