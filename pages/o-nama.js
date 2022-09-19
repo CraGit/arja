@@ -13,7 +13,7 @@ const Cijene = ({ stranica }) => {
   return (
     <div>
       <Head>
-        <title>{naslovHero} - Arja Interiers</title>
+        <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta
           name="description"
           content="Već više od 20 godina ARJA interiers nameće se kao snažan konkurent na

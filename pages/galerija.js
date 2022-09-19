@@ -10,7 +10,7 @@ const Galerija = ({ stranica }) => {
   return (
     <div className="bg-black">
       <Head>
-      <title>{naslovHero} - Arja Interiers</title>
+      <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta
           name="description"
           content="Galerija prijašnjih radova Arja Interiersa"

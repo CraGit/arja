@@ -30,7 +30,7 @@ const Home = ({ home }) => {
   return (
     <div>
       <Head>
-        <title>{naslovHero} - Arja Interiers</title>
+      <title>{`${naslovHero} - Arja Interiers`}</title>
         <meta
           name="description"
           content="Svojom visokokvalitetnom ponudom ARJA interiers prednjači u ponudi

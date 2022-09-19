@@ -10,7 +10,7 @@ const PrivacyPolicy = ({ privacyPolicy }) => {
   return (
     <div>
       <Head>
-      <title>{naslov} - Arja Interiers</title>
+      <title>{`${naslov} - Arja Interiers`}</title>
         <meta
           name="description"
           content="Sve vezano za pravila privatnosti Arja Interiersa"
