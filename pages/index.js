@@ -85,7 +85,7 @@ vrata i drvene građevinske stolarije."
               naslov={
                 router.locale === "hr" ? "Popratni materijal" : "Materials"
               }
-              link="/popratni-materijal"
+              link="/popratni-materijali"
               slika={`https:${slikaPopratniMaterijali.fields.file.url}`}
             />
           </div>
