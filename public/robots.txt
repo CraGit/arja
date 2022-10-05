@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://arja.hr/
+
+# Sitemaps
+Sitemap: https://arja.hr/sitemap.xml
