@@ -5,8 +5,4 @@
 - Slanje mailova: SENDGRID
 
 ## Todo:
-
-- sendgrid aktivirat i povezat
-- dodat preostale podstranice nakon sastanka
-- meta tagovi
-- deployat na server
+- prijevode jos ispravit kad posalje
