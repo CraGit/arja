@@ -6,4 +6,3 @@
 
 ## Todo:
 - prijevode jos ispravit kad posalje
-- prijavit na search console sitemap
