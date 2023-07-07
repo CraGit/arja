@@ -1,6 +1,10 @@
 import Hero from "../../components/Hero";
 import { createClient } from "contentful";
 import SectionColor from "../../components/SectionColor";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { INLINES, BLOCKS } from "@contentful/rich-text-types";
+import Image from "next/image";
+import Link from "next/link";
 import Section from "../../components/Section";
 import { useRouter } from "next/router";
 import ImageCard from "../../components/ImageCard";
@@ -12,8 +16,35 @@ export default function Vrata({ stranica }) {
     slikaHero,
     slikaSobna,
     slikaProtuprovalna,
+    sadrzaj,
   } = stranica;
   const router = useRouter();
+  const options = {
+    renderNode: {
+      [INLINES.HYPERLINK]: (node, children) => {
+        return (
+          <Link href={node.data.uri}>
+            <a>{children}</a>
+          </Link>
+        );
+      },
+    },
+    renderNode: {
+      [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
+        return (
+          <div className="flex justify-center items-center my-2">
+            <Image
+              src={`https:${node.data.target.fields.file.url}`}
+              height={300}
+              width={500}
+              className="rounded-lg"
+              alt={node.data.target.fields.title}
+            />
+          </div>
+        );
+      },
+    },
+  };
   return (
     <>
       <Head>
@@ -44,6 +75,13 @@ export default function Vrata({ stranica }) {
             link="/vrata/protuprovalna-i-protupozarna"
             slika={`https:${slikaProtuprovalna.fields.file.url}`}
           />
+        </div>
+      </SectionColor>
+      <SectionColor>
+        <div className="flex flex-col">
+          <div className="prose md:leading-7 prose-p:my-0 prose-headings:my-6 max-w-none prose-p:text-justify text-lg prose-headings:text-zuta text-white">
+            {documentToReactComponents(sadrzaj, options)}
+          </div>
         </div>
       </SectionColor>
     </>

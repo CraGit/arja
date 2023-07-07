@@ -4,12 +4,48 @@ import SectionColor from "../../components/SectionColor";
 import Section from "../../components/Section";
 import { useRouter } from "next/router";
 import ImageCard from "../../components/ImageCard";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { INLINES, BLOCKS } from "@contentful/rich-text-types";
+import Image from "next/image";
+import Link from "next/link";
 import Head from "next/head";
 export default function LaminatiIViniliStranica({ stranica }) {
-  const { naslovHero, podnaslovHero, slikaHero, slikaLaminati, slikaVinili } =
-    stranica;
+  const {
+    naslovHero,
+    podnaslovHero,
+    slikaHero,
+    slikaLaminati,
+    slikaVinili,
+    sadrzaj,
+  } = stranica;
   const router = useRouter();
 
+  const options = {
+    renderNode: {
+      [INLINES.HYPERLINK]: (node, children) => {
+        return (
+          <Link href={node.data.uri}>
+            <a>{children}</a>
+          </Link>
+        );
+      },
+    },
+    renderNode: {
+      [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
+        return (
+          <div className="flex justify-center items-center my-2">
+            <Image
+              src={`https:${node.data.target.fields.file.url}`}
+              height={300}
+              width={500}
+              className="rounded-lg"
+              alt={node.data.target.fields.title}
+            />
+          </div>
+        );
+      },
+    },
+  };
   return (
     <>
       <Head>
@@ -33,6 +69,13 @@ export default function LaminatiIViniliStranica({ stranica }) {
             link="/laminati-i-vinili/vinili"
             slika={`https:${slikaVinili.fields.file.url}`}
           />
+        </div>
+      </SectionColor>
+      <SectionColor>
+        <div className="flex flex-col">
+          <div className="prose md:leading-7 prose-p:my-0 prose-headings:my-6 max-w-none prose-p:text-justify text-lg prose-headings:text-zuta text-white">
+            {documentToReactComponents(sadrzaj, options)}
+          </div>
         </div>
       </SectionColor>
     </>
