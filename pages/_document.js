@@ -46,6 +46,12 @@ class MyDocument extends Document {
         <body className="selection:text-white selection:bg-zuta">
           <Main />
           <NextScript />
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNLRTR7"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+            }}
+          />
         </body>
       </Html>
     );
