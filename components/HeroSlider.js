@@ -12,7 +12,7 @@ const HeroSlider = ({ naslov, galerija }) => {
         {/* <p className="text-white text-lg sm:text-xl text-center mb-4 md:mb-8 tracking-widest text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-100">
           {podnaslov}
         </p> */}
-        <h1 className="text-5xl md:text-6xl font-semibold text-center mb-8 md:mb-12 tracking-tight text-white underline underline-offset-8 decoration-zuta">
+        <h1 className="text-4xl md:text-6xl font-semibold text-center mb-8 md:mb-12 tracking-tight text-white">
           {naslov}
         </h1>
       </div>
