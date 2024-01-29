@@ -73,7 +73,7 @@ export default function Gallery({ galerija }) {
                 }
                 className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200 cursor-pointer"
               />
-              <div className="bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50 absolute inset-0 pointer-events-none" />
+              <div className="bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-50 absolute inset-0 pointer-events-none" />
               <span className="inline-block text-white text-sm md:text-lg relative ml-4 md:ml-5 mb-3">
                 {item.fields.title}
               </span>

@@ -21,7 +21,9 @@ export default function ImageCard({ slika, link, naslov, podnaslov = "" }) {
             quality={90}
           ></Image>
 
-          <div className="bg-white mix-blend-multiply absolute inset-0"></div>
+          {/* <div className="bg-white mix-blend-multiply absolute inset-0"></div>
+           */}
+          <div className="mix-blend-multiply absolute inset-0 bg-gradient-to-t from-gray-600 to-gray-100"></div>
         </div>
       </a>
     </Link>

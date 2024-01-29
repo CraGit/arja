@@ -34,6 +34,7 @@ const HeroSlider = ({ naslov, galerija }) => {
             </div>
           ))}
         </Carousel>
+        <div className="mix-blend-multiply absolute inset-0 bg-gradient-to-t from-gray-500 to-gray-100"></div>
       </div>
     </section>
   );

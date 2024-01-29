@@ -28,7 +28,8 @@ const Hero = ({
       {/* <!-- image - end -->
 
       <!-- overlay - start --> */}
-      {/* <div className="bg-yellow-600 mix-blend-multiply absolute inset-0"></div> */}
+      {/* <div className="bg-gray-300 mix-blend-multiply absolute inset-0"></div> */}
+      <div className="mix-blend-multiply absolute inset-0 bg-gradient-to-t from-gray-600 to-gray-200"></div>
       {/* <!-- overlay - end -->
 
       <!-- text start --> */}
