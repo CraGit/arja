@@ -13,8 +13,14 @@ export default function ProtuprovalnaIProtupozarnaStranica({
   stranica,
   podstranice,
 }) {
-  const { naslovHero, podnaslovHero, slikaHero, slikaVieslojni, slikaMasivni } =
-    stranica;
+  const {
+    naslovHero,
+    podnaslovHero,
+    slikaHero,
+    slikaVieslojni,
+    slikaMasivni,
+    sadrzaj,
+  } = stranica;
   const router = useRouter();
   const options = {
     renderNode: {

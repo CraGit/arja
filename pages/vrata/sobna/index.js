@@ -10,8 +10,14 @@ import { INLINES, BLOCKS } from "@contentful/rich-text-types";
 import Image from "next/image";
 import Link from "next/link";
 export default function SobnaVrata({ stranica, podstranice }) {
-  const { naslovHero, podnaslovHero, slikaHero, slikaVieslojni, slikaMasivni } =
-    stranica;
+  const {
+    naslovHero,
+    podnaslovHero,
+    slikaHero,
+    slikaVieslojni,
+    slikaMasivni,
+    sadrzaj,
+  } = stranica;
   const router = useRouter();
   const options = {
     renderNode: {
