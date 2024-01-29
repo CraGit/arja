@@ -97,7 +97,6 @@ export async function getStaticProps({ locale }) {
   });
 
   return {
-    revalidate: 5,
     props: {
       stranica: stranica.items[0].fields,
       podstranice: podstranice.items,
