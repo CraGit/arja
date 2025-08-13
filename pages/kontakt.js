@@ -36,7 +36,7 @@ const Kontakt = () => {
         email,
         message,
       };
-      const res = await fetch("/api/sendgrid", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
